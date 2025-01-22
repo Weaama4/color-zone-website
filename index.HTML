@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Zone LLC - Remodeling and Painting Services</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #9b4dca, #f7b731); /* Purple to Yellow Gradient */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2rem;
+        }
+        nav {
+            background-color: #00bcd4; /* Baby Blue */
+            overflow: hidden;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            background-color: #ff9f00; /* Orange for hover */
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        .service {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #fff; /* White background */
+            color: #333; /* Clear text color */
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1), 0px -10px 20px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2), 0px -15px 30px rgba(255, 255, 255, 0.3);
+        }
+        .service h3 {
+            color: #9b4dca; /* Purple */
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        .service p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .service button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: white;
+            background-color: #9b4dca; /* Purple */
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        .service button:hover {
+            background-color: #f7b731; /* Yellow */
+        }
+        .service-details {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .contact {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .contact h2 {
+            margin-bottom: 20px;
+        }
+        .contact .contact-option {
+            position: relative;
+            display: inline-block;
+            margin: 10px;
+        }
+        .contact .contact-option a {
+            color: #00bcd4; /* Baby Blue */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact .hover-info {
+            display: none;
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #9b4dca; /* Purple */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+        .contact .contact-option:hover .hover-info {
+            display: block;
+        }
+        footer {
+            background-color: #00bcd4; /* Baby Blue */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+            box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === "block") {
+                details.style.display = "none";
+            } else {
+                details.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Color Zone LLC</h1>
+        <p>Your Trusted Partner for Remodeling and Painting Services in Austin and Surrounding Areas</p>
+        <p>We proudly serve Austin, Pflugerville, Round Rock, Georgetown, Mueller, and other surrounding areas.</p>
+    </header>
+
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Painting</h3>
+                    <p>Professional painting services for homes and businesses.</p>
+                    <button onclick="toggleDetails('painting-details')">Learn More</button>
+                    <div id="painting-details" class="service-details">
+                        <p>We provide high-quality painting services for both interior and exterior projects. Our expert painters ensure vibrant and durable finishes for walls, ceilings, trim, doors, and more. We use eco-friendly, low-VOC paints and deliver precise, flawless work for homes, offices, and commercial spaces. Whether you’re looking for a classic or modern look, we’ve got you covered.</p>
+                        <ul>
+                            <li>Interior Painting</li>
+                            <li>Exterior Painting</li>
+                            <li>Trim and Molding Painting</li>
+                            <li>Door and Window Frame Painting</li>
+                            <li>Wall and Ceiling Touch-Ups</li>
+                            <li>Commercial and Residential Projects</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service">
+                    <h3>Custom Wall Finishes</h3>
+                    <p>Luxury and custom finishes tailored to your style.</p>
+                    <button onclick="toggleDetails('custom-painting-details')">Learn More</button>
+                    <div id="custom-painting-details" class="service-details">
+                        <p>Transform your home with unique, custom finishes. We specialize in faux finishes, textured painting, and high-end materials like limestone and Venetian plasters. These finishes are perfect for creating artistic, timeless looks that add depth and style to your interiors. Whether you want a rustic, industrial, or luxurious appearance, we can create a finish that complements your taste.</p>
+                        <ul>
+                            <li>Faux Finishes (Wood, Marble, etc.)</li>
+                            <li>Venetian Plaster</li>
+                            <li>Limestone Paint (Stone-like Finish)</li>
+                            <li>Textured Finishes</li>
+                            <li>Glazed and Metallic Finishes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service">
+                    <h3>Handyman Services</h3>
+                    <p>All kinds of repairs and installations for your home and business.</p>
+                    <button onclick="toggleDetails('handyman-details')">Learn More</button>
+                    <div id="handyman-details" class="service-details">
+                        <p>Our handyman services cover a wide range of repairs and installations. Whether you need plumbing fixes, appliance installation, HVAC maintenance, drywall repairs, or even custom furniture assembly, our experienced professionals are here to help. No job is too big or too small – we can take care of it all.</p>
+                        <ul>
+                            <li>Plumbing Fixes and Installation</li>
+                            <li>Appliance Installation (Washer, Dryer, Fridge, etc.)</li>
+                            <li>HVAC Repairs and Maintenance</li>
+                            <li>Drywall Repairs and Patching</li>
+                            <li>Furniture Assembly and Installation</li>
+                            <li>Electrical and Lighting Installations</li>
+                            <li>Fixture and Cabinet Installations</li>
+                            <li>Custom Woodworking and Carpentry</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service">
+                    <h3>Home Remodeling</h3>
+                    <p>Comprehensive remodeling services for your dream home.</p>
+                    <button onclick="toggleDetails('home-remodeling-details')">Learn More</button>
+                    <div id="home-remodeling-details" class="service-details">
+                        <p>From kitchen and bathroom renovations to full home remodels, we offer complete remodeling services. Our experts specialize in design, project management, and high-end finishes. Whether you’re updating your space for aesthetic purposes or functionality, we bring your vision to life with attention to detail and quality craftsmanship.</p>
+                        <ul>
+                            <li>Kitchen Remodeling</li>
+                            <li>Bathroom Renovations</li>
+                            <li>Living Room and Bedroom Updates</li>
+                            <li>Flooring Installations</li>
+                            <li>Basement and Attic Conversions</li>
+                            <li>Custom Cabinetry and Shelving</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us to schedule your next project or request a quote.</p>
+            <div class="contact-option">
+                <a href="tel:+15127365338">Call Us: 512-736-5338</a>
+                <div class="hover-info">Speak with an expert!</div>
+            </div>
+            <div class="contact-option">
+                <a href="mailto:colorzoneinterior@gmail.com">Email Us: colorzoneinterior@gmail.com</a>
+                <div class="hover-info">We'll respond quickly!</div>
+            </div>
+            <div class="contact-option">
+                <a href="https://www.facebook.com/share/194dnGv98d/?mibextid=wwXIfr" target="_blank">Follow Us on Facebook</a>
+                <div class="hover-info">Stay updated with our projects!</div>
+            </div>
+            <div class="contact-option">
+                <a href="https://www.facebook.com/share/1BQLqgH1ek/?mibextid=wwXIfr" target="_blank">Visit Our Facebook Profile</a>
+                <div class="hover-info">Connect with us personally!</div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Color Zone LLC | Remodeling and Painting Services | Proudly Serving Austin, Pflugerville, Round Rock, Georgetown, Mueller, and Surrounding Areas.</p>
+    </footer>
+</body>
+</html>
